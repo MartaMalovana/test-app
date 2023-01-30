@@ -1,0 +1,12 @@
+.result {
+    display: flex;
+    padding: 17px 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+
+    &__info {
+        margin: 0;
+    }
+}

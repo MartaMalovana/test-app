@@ -191,8 +191,10 @@
     buttonCancel.addEventListener('click', closeForm);
     function closeForm () {
         popup.style.display = 'none';
-        const guestDiv = document.querySelector('.popup-assignedChosen');
-        if(guestDiv) guestDiv.remove();
+        const a = document.querySelector('.popup__assignedChosen');
+        if(a) a.remove();
+        const b = document.querySelector('.popup__followChosen');
+        if(b) b.remove();
     }
 
     // Choose guests in modal form assigned
