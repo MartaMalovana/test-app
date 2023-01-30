@@ -169,7 +169,7 @@
     // Show guest list
     const guestButton = document.querySelector('.check__guests');
     guestButton.addEventListener('click', showGuests);
-    function showGuests() {
+    function showGuests () {
         const icon = document.querySelector('.check__icon');
         // Show list and change the icon (rotate)
         list.classList.toggle('active');
@@ -189,10 +189,10 @@
     const buttonCancel = document.querySelector('.popup__cancel');
     buttonClose.addEventListener('click', closeForm);
     buttonCancel.addEventListener('click', closeForm);
-    function closeForm() {
+    function closeForm () {
         popup.style.display = 'none';
         const guestDiv = document.querySelector('.popup-assignedChosen');
-        if (guestDiv) guestDiv.remove();
+        if(guestDiv) guestDiv.remove();
     }
 
     // Choose guests in modal form assigned
@@ -210,7 +210,7 @@
             const buttonDelete = document.createElement('button');
             buttonDelete.classList.add('popup__delete');
             newGuest.prepend(buttonDelete);
-            const guestDiv = document.querySelector('.popup-assignedChosen');
+            const guestDiv = document.querySelector('.popup__assignedChosen');
             guestDiv.appendChild(newGuest);
             // buttonAssign.after(newGuest);
 
@@ -218,10 +218,39 @@
             buttonDelete.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.target.parentElement.remove();
-
+                
             })
         })
     });
 
+    // Choose followers in modal form 
+    const buttonFollow = document.querySelector('.popup__followed');
+    buttonFollow.addEventListener('click', (e) => {
+        e.preventDefault();
+        const list = document.querySelector('.popup__followList');
+        list.classList.toggle('active');
+        const icon = document.querySelector('.popup__followSpan');
+        icon.classList.toggle('active');
+        list.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            const newGuest = document.createElement('p');
+            newGuest.classList.add('popup__guestName');
+            newGuest.textContent = e.target.textContent;
+            const buttonDelete = document.createElement('button');
+            buttonDelete.classList.add('popup__delete');
+            newGuest.prepend(buttonDelete);
+            const guestDiv = document.querySelector('.popup__followChosen');
+            guestDiv.appendChild(newGuest);
+            // buttonAssign.after(newGuest);
+
+            // Delete guest
+            buttonDelete.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.target.parentElement.remove();
+                
+            })
+        })
+
+    })
 
 })();
