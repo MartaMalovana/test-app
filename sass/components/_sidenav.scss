@@ -1,0 +1,141 @@
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    padding: 27px 8px 0;
+    background-color: $aside-color;
+}
+
+.logo {
+    width: 99px;
+    height: 24px;
+    margin-left: 8px;
+    margin-bottom: 27px;
+    background: url('../../images/svg/logo.svg') no-repeat;
+}
+
+.navigation {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__group {
+        margin-bottom: 28px;
+    };
+
+    &__group--profile {
+        margin-top: auto;
+        margin-bottom: 20px;
+    };
+
+    &__item {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0 0 4px;
+        padding: 10px 0 10px 44px;
+        text-align: start;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.428;
+        color: $text-navigation;
+
+        &.active {
+            color: $text-active;
+            background-color: $background-active;
+        }
+    };
+
+    &__item::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 8px;
+        top: 8px;
+        background-size: contain;
+    }
+
+    &__item--dashboard::before {
+        background-image: url('../../images/svg/dashboard.svg');
+    }
+
+    &__item--tasks::before {
+        background-image: url('../../images/svg/tasks.svg');
+    }
+
+    &__item--contacts::before {
+        background-image: url('../../images/svg/contacts.svg');
+    }
+
+    &__item--content::before {
+        background-image: url('../../images/png/content.png');
+    }
+
+    &__item--templates::before {
+        background-image: url('../../images/png/templates.png');
+    }
+
+    &__item--destinations::before {
+        background-image: url('../../images/png/destionations.png');
+    }
+
+    &__item--search::before {
+        background-image: url('../../images/png/search.png');
+    }
+
+    &__item--suppliers::before {
+        background-image: url('../../images/png/suppliers.png');
+    }
+
+    &__item--trips::before {
+        background-image: url('../../images/png/trips.png');
+    }
+
+    &__item--community {
+        width: auto;
+        &::before {
+            background-image: url('../../images/png/community.png');
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 10.67px;
+            height: 10.67px;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            background: url('../../images/png/community-link.png') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__item--commissions::before {
+        background-image: url('../../images/png/commissions.png');
+    }
+
+    &__item--reports::before {
+        background-image: url('../../images/png/reports.png');
+    }
+
+    &__item--training::before {
+        background-image: url('../../images/png/training.png');
+    }
+
+    &__item--settings::before {
+        background-image: url('../../images/png/settings.png');
+    }
+
+    &__title {
+        margin: 0 auto 4px 12px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.333;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $text-title;
+    }
+}
+

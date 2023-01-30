@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="sidenav">
+            <div class="logo"></div>
+            <nav class="navigation">
+                <div>
+                    <div class="navigation__group">
+                        <button class="navigation__item navigation__item--dashboard" type="button">Dashboard</button>
+                        <button class="navigation__item navigation__item--tasks" type="button">Tasks</button>   
+                    </div>
+                    <div class="navigation__group">
+                        <p class="navigation__title">Marketing</p>
+                        <button class="navigation__item navigation__item--contacts" type="button">Contacts</button>
+                        <button class="navigation__item navigation__item--content" type="button">Content</button>
+                        <button class="navigation__item navigation__item--templates" type="button">Templates</button>
+                    </div>
+                    <div class="navigation__group">
+                        <p class="navigation__title">Planning</p>
+                        <button class="navigation__item navigation__item--destinations" type="button">Destintations</button>
+                        <button class="navigation__item navigation__item--search active" type="button">Search Supply</button>
+                        <button class="navigation__item navigation__item--suppliers" type="button">Suppliers</button>
+                        <button class="navigation__item navigation__item--trips" type="button">Trips</button>
+                        <a class="navigation__item navigation__item--community" href="#">Community</a>
+                    </div>
+                    <div class="navigation__group">
+                        <p class="navigation__title">Business</p>
+                        <button class="navigation__item navigation__item--commissions" type="button">Commissions</button>
+                        <button class="navigation__item navigation__item--reports" type="button">Reports</button>
+                    </div>    
+                </div>
+                <div class="navigation__group navigation__group--profile">
+                    <button class="navigation__item navigation__item--training" type="button">Training & Help</button>
+                    <button class="navigation__item navigation__item--settings" type="button">Settings</button>
+                </div>
+            </nav>
+        </section>
+        <section class="content">
+            <header>
+                <nav class="page-nav">
+                    <div class="page-nav__buttons">
+                        <div class="page-nav__option active">
+                            <button class="page-nav__button" type="button">Hotels</button>
+                            <span class="page-nav__amount">170,802</span>
+                        </div>
+                        <div class="page-nav__option">
+                            <button class="page-nav__button" type="button">Cruises</button>
+                            <span class="page-nav__amount">57</span>
+                        </div>
+                        <div class="page-nav__option">
+                            <button class="page-nav__button" type="button">TOURS</button>
+                            <span class="page-nav__amount">9</span>
+                        </div>
+                        <div class="page-nav__option">
+                            <button class="page-nav__button" type="button">CARS</button> 
+                            <span class="page-nav__amount">13</span>
+                        </div>   
+                    </div>
+                    <button class="page-nav__new" type="button">New Supply</button>
+                </nav>
+                <section class="search-filter">
+                        <div class="search">
+                            <input type="text" class="search__input" placeholder="Search items">
+                            <button class="search__filters">Filters</button>
+                        </div>
+                    <div class="check">
+                        <input class="check__in datepicker" placeholder="Check In"></input>
+                        <input class="check__out datepicker" placeholder="Check Out"></input>
+                        <div class="check__guestBox">
+                            <button class="check__guests">
+                                Guests
+                                <span class="check__icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <main>
+                <table class="table">
+                    <thead class="table__head">
+                        <tr>
+                            <th class="table__title table__title--checkbox"><div></div></th>
+                            <th class="table__title table__title--name">name</th>
+                            <th class="table__title table__title--supplier">Supplier</th>
+                            <th class="table__title table__title--location">Location</th>
+                            <th class="table__title table__title--vibe">Vibe</th>
+                            <th class="table__title table__title--perks">Perks</th>
+                            <th class="table__title table__title--from">FROM</th>
+                            <th class="table__title table__title--amenities">Amenities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
+                            <td class="table__item table__item--input">
+                                <label><input type="checkbox" value="Grand Hotel du Palais Royal"/><span></span></label>
+                            </td>
+                            <td class="table__item table__item--hotel">Grand Hotel du Palais Royal</td>
+                            <td class="table__item table__item--supplier">Fairmont</td>
+                            <td class="table__item table__item--location">Paris, France</td>
+                            <td class="table__item table__item--vibe">Sophisticated</td>
+                            <td class="table__item table__item--perks"><span>Virtuoso</span></td>
+                            <td class="table__item table__item--from"><span>US$</span> 10.5k</td>
+                            <td class="table__item table__item--amenities">
+                                <img class="jump" src="./images/png/jump-rope.png" />
+                                <img class="swimming" src="./images/png/swimming.png" />
+                                <img class="pizza" src="./images/png/pizza.png" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="popup">
+                    <div class="popup__form">
+                        <form action="" >
+                            <h1 class="popup__title">Lorem Ipsum</h1>
+                            <p class="popup__description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <label>Date:
+                                <div class="input-group date">
+                                    <input type="text" class="popup__date form-control" value="03/25/2022">
+                                    <div class="input-group-addon">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                    </div>
+                                </div>                                
+                            </label>
+                            <label class="popup__assignedLabel">Assigned to:
+                                <button type="button" class="popup__assigned">Please enter 2 or more characters<span class="popup__assignedSpan"></span></button>
+                                <ul class="popup__assignedList">
+                                    <li value="Madeline Tenny">Madeline Tenny</li>
+                                    <li value="Lawrence Harding">Lawrence Harding</li>
+                                    <li value="Willa Chavez">Willa Chavez</li>
+                                    <li value="Leslie Alexander">Leslie Alexander</li>
+                                    <li value="Robert Fox">Robert Fox</li>
+                                    <li value="Cameron Williamson">Cameron Williamson</li>
+                                    <li value="Jacob Jones">Jacob Jones</li>
+                                </ul>
+                            </label>
+                            <label>Followed by:
+                                <button type="text" name="followed" class="popup__followed popup__assigned">Please enter 2 or more characters</button>
+                            </label>
+                            <div class="popup__accept">
+                                <p>Excepteur sint occaecat cupidatat</p>
+                                <label>Lorem ipsum dolor sit amet *
+                                    <input type="checkbox" name="a">
+                                    <span></span>
+                                </label>    
+                                <label>Lorem ipsum dolor sit amet *
+                                    <input type="checkbox" name="b" checked>
+                                    <span></span>
+                                </label>    
+                                <label>Lorem ipsum dolor sit amet
+                                    <input type="checkbox" name="c">
+                                    <span></span>
+                                </label>    
+                            </div>
+                            <label class="popup__comment">Add Comment
+                                <textarea name="comment" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "></textarea>
+                            </label>
+                            <div class="popup__buttons">
+                                <button type="button" class="popup__cancel">Cancel</button>
+                                <button type="submit" class="popup__submit">Post</button>
+                            </div>
+                        </form>
+                        <button type="button" class="popup__button"></button>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </section>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="./index.js"></script> 
+   <script type="text/javascript">
+   
+   $('.datepicker').datepicker({
+    autoclose: true
+   });
+
+   $('.popup .input-group.date').datepicker({
+    autoclose: true,
+    todayHighlight: true
+});
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+table {
+    border-collapse: collapse;
+}
+
+.table__head {
+    height: 34px;
+    background-color: rgba(247, 249, 252, 0.8);
+    border-top: 1px solid $table-line;
+    border-bottom: 1px solid $table-line;
+}
+
+.table__title {
+    padding: 0 0 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: start;
+    color: $table-title;
+    border-width: 0;
+// outline: 1px solid red;
+
+    &--checkbox {
+        width: 46px;
+        padding-left: 20px;
+        div {
+            width: 16px;
+            height: 16px;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+            border: 1px solid $table-line;
+            border-radius: 4px;
+        }
+    }
+    &--name {
+        position: relative;
+        width: 242px;
+        color: $table-name-title;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting1.png');
+        }
+    }
+    &--supplier {
+        width: 150px;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting2.png');
+        }
+    }
+    &--location {
+        width: 150px;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting2.png');
+        }
+    }
+    &--vibe {
+        width: 200px;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting2.png');
+        }
+    }
+    &--perks {
+        width: 150px;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting2.png');
+        }
+    }
+    &--from {
+        width: 100px;
+        &::after {
+            @extend %table-icon-after;
+            background-image: url('../../images/png/column-sorting2.png');
+        }
+    }
+    &--amenities {
+        width: 100px;
+    }
+}
+
+.table__row {
+    height: 46px;
+    border-bottom: 1px solid $table-line;
+
+    td {
+        padding: 12px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.428;
+        letter-spacing: 0.02em;
+        color: $table-name-title;
+    }
+
+    .table__item {
+
+        &--input {
+            padding-left: 20px;
+            label {
+                display: flex;
+                align-items: center;  
+                cursor: pointer;  
+            }
+            input {
+                margin: 0;
+                appearance: none;
+                &:checked + span {
+                    background: $table-accent url('../../images/png/ok.png') no-repeat center;
+                    background-size: 9px 6px;
+                    border-color: $table-accent;
+                    }
+            }
+            span {
+                display: block;
+                width: 16px;
+                height: 16px;
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+                border: 1px solid $table-line;
+                border-radius: 4px;
+            }
+        }
+
+        &--hotel {
+            color: $table-accent;
+            font-weight: 500;
+        }
+
+        &--perks {
+            span {
+                height: 20px;
+                position: relative;
+                background-color: $perks;
+                padding: 3px 8px 3px 20px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1.5;
+                color: #14804A;
+            }
+
+            span::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                left: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #38A06C;
+                border-radius: 2px;
+                ;
+            }
+        }
+
+        &--from {
+            span {
+                color: $text-title;
+            }
+        }
+
+        &--amenities {
+            .jump,
+            .swimming,
+            .pizza {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+

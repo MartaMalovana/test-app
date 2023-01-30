@@ -1,0 +1,38 @@
+%table-icon-after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+
+%modal-input {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+}
+
+%modal-label {
+    width: 100%;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.214;
+    color: $table-name-title;
+}
+
+%modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px 9px 15px;
+    height: 38px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px solid $table-line;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.428;
+}
