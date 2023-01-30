@@ -2,6 +2,10 @@ table {
   border-collapse: collapse;
 }
 
+.table {
+  margin-bottom: 0;
+}
+
 .table__head {
   height: 34px;
   background-color: rgba(247, 249, 252, 0.8);
