@@ -169,7 +169,7 @@
     // Show guest list
     const guestButton = document.querySelector('.check__guests');
     guestButton.addEventListener('click', showGuests);
-    function showGuests () {
+    function showGuests() {
         const icon = document.querySelector('.check__icon');
         // Show list and change the icon (rotate)
         list.classList.toggle('active');
@@ -189,13 +189,13 @@
     const buttonCancel = document.querySelector('.popup__cancel');
     buttonClose.addEventListener('click', closeForm);
     buttonCancel.addEventListener('click', closeForm);
-    function closeForm () {
+    function closeForm() {
         popup.style.display = 'none';
         const guestDiv = document.querySelector('.popup-assignedChosen');
-        if(guestDiv) guestDiv.remove();
+        if (guestDiv) guestDiv.remove();
     }
 
-    // Choose guests
+    // Choose guests in modal form assigned
     const buttonAssign = document.querySelector('.popup__assigned');
     buttonAssign.addEventListener('click', () => {
         const list = document.querySelector('.popup__assignedList');
@@ -218,9 +218,10 @@
             buttonDelete.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.target.parentElement.remove();
-                
+
             })
         })
-    })
+    });
+
 
 })();

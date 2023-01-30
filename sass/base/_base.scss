@@ -1,24 +1,24 @@
 * {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 button {
-    cursor: pointer;
-    background-color: inherit;
-    border: none;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
 }
 
 a {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .wrapper {
-    display: flex;
-    max-width: 1440px;
-    margin: 0 auto;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .content {
-    width: calc(100% - 256px);
+  width: calc(100% - 256px);
 }

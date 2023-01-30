@@ -10,7 +10,7 @@
   display: block;
   width: 100%;
   margin-top: 8px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
 }
 
@@ -20,7 +20,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.214;
-  color: #171C26;
+  color: #171c26;
 }
 
 .popup__submit, .popup__cancel {
@@ -31,7 +31,7 @@
   height: 38px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
-  border: 1px solid #E9EDF5;
+  border: 1px solid #e9edf5;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.428;
@@ -67,7 +67,7 @@ a {
   flex-direction: column;
   width: 256px;
   padding: 27px 8px 0;
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
 
 .logo {
@@ -102,11 +102,11 @@ a {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.428;
-  color: #D1D5DB;
+  color: #d1d5db;
 }
 .navigation__item.active {
-  color: #FFFFFF;
-  background-color: #4B5563;
+  color: #ffffff;
+  background-color: #4b5563;
 }
 .navigation__item::before {
   content: "";
@@ -180,11 +180,11 @@ a {
   line-height: 1.333;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #6B7280;
+  color: #6b7280;
 }
 
 header {
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
 }
 
 .page-nav {
@@ -211,7 +211,7 @@ header {
   top: 28px;
   left: 0;
   height: 4px;
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
 .page-nav__button {
   margin-right: 6px;
@@ -227,8 +227,8 @@ header {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.333;
-  color: #1E40AF;
-  background: #DBEAFE;
+  color: #1e40af;
+  background: #dbeafe;
   border-radius: 4px;
   padding: 2px 10px;
 }
@@ -238,12 +238,12 @@ header {
   height: 38px;
   padding: 9px 17px 9px 43px;
   border-radius: 6px;
-  background-color: #4F46E5;
+  background-color: #4f46e5;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.428;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .page-nav__new::before {
   position: absolute;
@@ -270,8 +270,8 @@ header {
   width: 400px;
   height: 100%;
   margin-right: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #D1D5DB;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -282,7 +282,7 @@ header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.428;
-  color: #6B7280;
+  color: #6b7280;
   border: none;
   border-radius: 6px;
 }
@@ -303,9 +303,9 @@ header {
   width: 98px;
   height: 100%;
   padding-left: 45px;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   border-radius: 0px 6px 6px 0px;
-  border-left: 1px solid #D1D5DB;
+  border-left: 1px solid #d1d5db;
   overflow: hidden;
   font-weight: 500;
   font-size: 14px;
@@ -340,9 +340,9 @@ header {
   font-size: 14px;
   line-height: 1.428;
   text-align: start;
-  color: #6B7280;
+  color: #6b7280;
   border-radius: 6px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
 }
 .check__in {
   border-radius: 6px 0 0 6px;
@@ -355,7 +355,7 @@ header {
 .check__guests {
   position: relative;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0 6px 6px 0;
 }
 .check__icon {
@@ -385,7 +385,7 @@ header {
   margin: 0;
   padding: 9px 13px;
   list-style: none;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   z-index: 99;
@@ -401,10 +401,10 @@ header {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #171C26;
+  color: #171c26;
 }
 .check__guest:hover, .check__guest:focus {
-  color: #1E40AF;
+  color: #1e40af;
   cursor: default;
 }
 
@@ -415,8 +415,8 @@ table {
 .table__head {
   height: 34px;
   background-color: rgba(247, 249, 252, 0.8);
-  border-top: 1px solid #E9EDF5;
-  border-bottom: 1px solid #E9EDF5;
+  border-top: 1px solid #e9edf5;
+  border-bottom: 1px solid #e9edf5;
 }
 
 .table__title {
@@ -437,15 +437,15 @@ table {
 .table__title--checkbox div {
   width: 16px;
   height: 16px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
-  border: 1px solid #E9EDF5;
+  border: 1px solid #e9edf5;
   border-radius: 4px;
 }
 .table__title--name {
   position: relative;
   width: 242px;
-  color: #171C26;
+  color: #171c26;
 }
 .table__title--name::after {
   background-image: url("../../images/png/column-sorting1.png");
@@ -486,7 +486,7 @@ table {
 
 .table__row {
   height: 46px;
-  border-bottom: 1px solid #E9EDF5;
+  border-bottom: 1px solid #e9edf5;
 }
 .table__row td {
   padding: 12px 10px;
@@ -494,7 +494,7 @@ table {
   font-size: 14px;
   line-height: 1.428;
   letter-spacing: 0.02em;
-  color: #171C26;
+  color: #171c26;
 }
 .table__row .table__item--input {
   padding-left: 20px;
@@ -511,31 +511,31 @@ table {
           appearance: none;
 }
 .table__row .table__item--input input:checked + span {
-  background: #5E5ADB url("../../images/png/ok.png") no-repeat center;
+  background: #5e5adb url("../../images/png/ok.png") no-repeat center;
   background-size: 9px 6px;
-  border-color: #5E5ADB;
+  border-color: #5e5adb;
 }
 .table__row .table__item--input span {
   display: block;
   width: 16px;
   height: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
-  border: 1px solid #E9EDF5;
+  border: 1px solid #e9edf5;
   border-radius: 4px;
 }
 .table__row .table__item--hotel {
-  color: #5E5ADB;
+  color: #5e5adb;
   font-weight: 500;
 }
 .table__row .table__item--perks span {
   height: 20px;
   position: relative;
-  background-color: #E1FCEF;
+  background-color: #e1fcef;
   padding: 3px 8px 3px 20px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
-  color: #14804A;
+  color: #14804a;
 }
 .table__row .table__item--perks span::before {
   position: absolute;
@@ -545,11 +545,11 @@ table {
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #38A06C;
+  background-color: #38a06c;
   border-radius: 2px;
 }
 .table__row .table__item--from span {
-  color: #6B7280;
+  color: #6b7280;
 }
 .table__row .table__item--amenities .jump,
 .table__row .table__item--amenities .swimming,
@@ -575,7 +575,7 @@ table {
   width: 462px;
   height: 718px;
   padding: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
@@ -594,7 +594,7 @@ table {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  color: #171C26;
+  color: #171c26;
 }
 .popup__title::after {
   position: absolute;
@@ -603,14 +603,14 @@ table {
   height: 1px;
   left: 0;
   bottom: -16px;
-  background-color: #E9EDF5;
+  background-color: #e9edf5;
 }
 .popup__description {
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.214;
-  color: #6B7280;
+  color: #6b7280;
 }
 .popup label.popup__comment {
   margin-bottom: 16px;
@@ -624,7 +624,7 @@ table {
   margin-left: 24px;
   font-size: 13px;
   line-height: 16px;
-  color: #6B7280;
+  color: #6b7280;
 }
 .popup__accept input {
   -webkit-appearance: none;
@@ -632,9 +632,9 @@ table {
           appearance: none;
 }
 .popup__accept input:checked + span {
-  background: #5E5ADB url("../../images/png/ok.png") no-repeat center;
+  background: #5e5adb url("../../images/png/ok.png") no-repeat center;
   background-size: 9px 6px;
-  border-color: #5E5ADB;
+  border-color: #5e5adb;
 }
 .popup__accept span {
   position: absolute;
@@ -644,7 +644,7 @@ table {
   top: 0;
   left: -24px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
-  border: 1px solid #E9EDF5;
+  border: 1px solid #e9edf5;
   border-radius: 4px;
 }
 .popup__assignedLabel {
@@ -656,15 +656,15 @@ table {
   justify-content: space-between;
   padding: 7px 8px;
   text-align: start;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  color: #6B7280;
+  color: #6b7280;
 }
 .popup__assigned.active {
-  color: #1E40AF;
+  color: #1e40af;
 }
 .popup__assigned span {
   display: inline-block;
@@ -683,7 +683,7 @@ table {
   display: none;
   padding: 9px 13px;
   list-style: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   z-index: 99;
@@ -698,10 +698,10 @@ table {
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: #171C26;
+  color: #171c26;
 }
 .popup__assignedList li:hover, .popup__assignedList li:focus {
-  color: #1E40AF;
+  color: #1e40af;
   cursor: default;
 }
 .popup__guestName {
@@ -714,11 +714,11 @@ table {
   margin-top: 8px;
   margin-bottom: 8px;
   padding: 4px 8px;
-  background: #DBEAFE;
+  background: #dbeafe;
   border-radius: 5px;
   font-size: 14px;
   line-height: 17px;
-  color: #1E40AF;
+  color: #1e40af;
 }
 .popup__delete {
   width: 5px;
@@ -729,16 +729,23 @@ table {
   background: url("../../images/png/blue-close.png") no-repeat;
   background-size: contain;
 }
+.popup__followLabel .popup__followSpan {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/png/arrow-dropdown.png");
+  background-size: contain;
+}
 .popup textarea {
   width: 100%;
   margin-top: 8px;
   height: 98px;
   padding: 8px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   font-size: 13px;
   line-height: 16px;
-  color: #6B7280;
+  color: #6b7280;
 }
 .popup__buttons {
   display: flex;
@@ -746,21 +753,21 @@ table {
 }
 .popup__cancel {
   margin-right: 8px;
-  color: #6B7280;
+  color: #6b7280;
 }
 .popup__submit {
-  color: #FFFFFF;
-  background-color: #4F46E5;
+  color: #ffffff;
+  background-color: #4f46e5;
 }
 
 .datepicker-days thead {
-  background: #4F46E5;
-  color: #FFFFFF;
+  background: #4f46e5;
+  color: #ffffff;
 }
 .datepicker-days thead th {
   box-sizing: content-box;
   border-radius: 0;
-  border-color: #4F46E5;
+  border-color: #4f46e5;
   border-spacing: 0px;
 }
 

@@ -1,277 +1,285 @@
 .popup {
-    position: fixed;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;    
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 99;
-    
-    &__formBox {
-        position: relative;
-        width: 462px;
-        height: 718px;
-        padding: 16px;
-        background-color: $text-active;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+
+  &__formBox {
+    position: relative;
+    width: 462px;
+    height: 718px;
+    padding: 16px;
+    background-color: $text-active;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/png/close.png");
+    background-size: contain;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $table-name-title;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -16px;
+      background-color: $table-line;
     }
+  }
 
-    &__button {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        width: 24px;
-        height: 24px;
-        background-image: url('../../images/png/close.png');
-        background-size: contain;
+  &__description {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.214;
+    color: $text-title;
+  }
+
+  label {
+    @extend %modal-label;
+    &.popup__comment {
+      margin-bottom: 16px;
     }
+  }
 
-    &__title {
-        position: relative;
-        margin-bottom: 32px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        color: $table-name-title;
+  &__date {
+    @extend %modal-input;
+  }
 
-        &::after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 1px;
-            left: 0;
-            bottom: -16px;
-            background-color: $table-line;
-        }
-    }
+  &__assigned {
+    @extend %modal-input;
+  }
 
-    &__description {
-        margin-bottom: 16px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.214;
-        color: $text-title;
+  &__followed {
+    @extend %modal-input;
+  }
+
+  &__accept {
+    @extend %modal-label;
+
+    p {
+      margin-bottom: 8px;
     }
 
     label {
-        @extend %modal-label;
-        &.popup__comment {
-            margin-bottom: 16px;
-        }
+      position: relative;
+      margin-bottom: 8px;
+      margin-left: 24px;
+      font-size: 13px;
+      line-height: 16px;
+      color: $text-title;
     }
 
-    &__date {
-        @extend %modal-input;
-    }
- 
-    &__assigned {
-        @extend %modal-input;
-    }
-
-    &__followed {
-        @extend %modal-input;
+    input {
+      appearance: none;
+      &:checked + span {
+        background: $table-accent url("../../images/png/ok.png") no-repeat
+          center;
+        background-size: 9px 6px;
+        border-color: $table-accent;
+      }
     }
 
-    &__accept {
-        @extend %modal-label;
+    span {
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: -24px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+      border: 1px solid $table-line;
+      border-radius: 4px;
+    }
+  }
 
-        p {
-            margin-bottom: 8px;
-        }
+  &__assignedLabel {
+    position: relative;
+  }
 
-        label {
-            position: relative;
-            margin-bottom: 8px;
-            margin-left: 24px;
-            font-size: 13px;
-            line-height: 16px;
-            color: $text-title;
-        }
+  &__assigned {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 8px;
+    text-align: start;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #6b7280;
 
-        input {
-            appearance: none;
-            &:checked + span {
-                background: $table-accent url('../../images/png/ok.png') no-repeat center;
-                background-size: 9px 6px;
-                border-color: $table-accent;
-            }
-        }
-
-        span {
-            position: absolute;
-            display: block;
-            width: 16px;
-            height: 16px;
-            top: 0;
-            left: -24px;
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
-            border: 1px solid $table-line;
-            border-radius: 4px;
-        }
-
+    &.active {
+      color: #1e40af;
     }
 
-    &__assignedLabel {
-        position: relative;
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../images/png/arrow-dropdown.png");
+      background-size: contain;
     }
 
-    &__assigned {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 7px 8px;
-        text-align: start;
-        border: 1px solid #D1D5DB;
-        border-radius: 4px;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 16px;
-        color: #6B7280;
+    span.active {
+      transform: rotate(180deg);
+    }
+  }
 
-        &.active {
-            color: #1E40AF;
-            
-        }
+  &__assignedList {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    display: none;
+    padding: 9px 13px;
+    list-style: none;
+    background-color: $text-active;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    z-index: 99;
 
-        span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            background-image: url('../../images/png/arrow-dropdown.png');
-            background-size: contain;
-        }
-
-        span.active {
-            transform: rotate(180deg);
-        }
-
+    &.active {
+      display: block;
     }
 
-    &__assignedList {
-        position: absolute;
-        top: 68px;
-        left: 0;
-        display: none;
-        padding: 9px 13px;
-        list-style: none;
-        background-color: $text-active;
-        box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
-        z-index: 99;
+    li {
+      margin-bottom: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      color: #171c26;
 
-        &.active {
-            display: block;
-        }
-
-        li {
-            margin-bottom: 8px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-            display: flex;
-            align-items: center;
-            color: #171C26;
-
-            &:hover,
-            &:focus {
-                color: #1E40AF;
-                cursor:default;
-            }
-        }
+      &:hover,
+      &:focus {
+        color: #1e40af;
+        cursor: default;
+      }
     }
+  }
 
-    &__guestName {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        height: 25px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        padding: 4px 8px;
-        background: #DBEAFE;
-        border-radius: 5px;
-        font-size: 14px;
-        line-height: 17px;
-        color: #1E40AF;
+  &__guestName {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background: #dbeafe;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1e40af;
+  }
+
+  &__delete {
+    width: 5px;
+    height: 5px;
+    padding: 0;
+    border: none;
+    margin-right: 4px;
+    background: url("../../images/png/blue-close.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__followLabel {
+    .popup__followSpan {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../images/png/arrow-dropdown.png");
+      background-size: contain;
     }
+  }
 
-    &__delete {
-        width: 5px;
-        height: 5px;
-        padding: 0;
-        border: none;
-        margin-right: 4px;
-        background: url('../../images/png/blue-close.png') no-repeat;
-        background-size: contain;
-    }
+  textarea {
+    width: 100%;
+    margin-top: 8px;
+    height: 98px;
+    padding: 8px;
+    border: 1px solid $text-navigation;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 16px;
+    color: $text-title;
+  }
 
-    textarea {
-        width: 100%;
-        margin-top: 8px;
-        height: 98px;
-        padding: 8px;
-        border: 1px solid $text-navigation;
-        border-radius: 4px;
-        font-size: 13px;
-        line-height: 16px;
-        color: $text-title;
-    }
+  &__buttons {
+    display: flex;
+    justify-content: end;
+  }
 
-    &__buttons {
-        display: flex;
-        justify-content: end;
-    }
+  &__cancel {
+    margin-right: 8px;
+    @extend %modal-button;
+    color: $text-title;
+  }
 
-    &__cancel {
-        margin-right: 8px;
-        @extend %modal-button;
-        color: $text-title;
-    }
-
-    &__submit {
-        color: $text-active;
-        background-color: $button-new;
-        @extend %modal-button;
-    }
-
+  &__submit {
+    color: $text-active;
+    background-color: $button-new;
+    @extend %modal-button;
+  }
 }
 
 .datepicker-days thead {
-    background: $button-new;
-    color: $text-active;
+  background: $button-new;
+  color: $text-active;
 
-        th {
-        box-sizing: content-box;
-        border-radius: 0;
-        border-color:$button-new;
-        border-spacing: 0px;
-    }
+  th {
+    box-sizing: content-box;
+    border-radius: 0;
+    border-color: $button-new;
+    border-spacing: 0px;
+  }
 }
 
 .datepicker {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
 
-    &-dropdown {
-        padding: 0;
-    }
+  &-dropdown {
+    padding: 0;
+  }
 
-    th {
-        padding: 8px;
-    }
+  th {
+    padding: 8px;
+  }
 
-    td {
-        padding: 8px; 
-        font-weight: 400; 
-    }
+  td {
+    padding: 8px;
+    font-weight: 400;
+  }
 
-    .day {
-        border-radius: 0;
-    }
-
+  .day {
+    border-radius: 0;
+  }
 }
