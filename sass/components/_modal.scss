@@ -10,7 +10,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 99;
     
-    &__form {
+    &__formBox {
         position: relative;
         width: 462px;
         height: 718px;
@@ -190,6 +190,7 @@
         width: fit-content;
         height: 25px;
         margin-top: 8px;
+        margin-bottom: 8px;
         padding: 4px 8px;
         background: #DBEAFE;
         border-radius: 5px;
@@ -199,13 +200,13 @@
     }
 
     &__delete {
-        width: 10px;
-        height: 10px;
+        width: 5px;
+        height: 5px;
         padding: 0;
         border: none;
         margin-right: 4px;
-        background: url('../../images/png/close.png') no-repeat;
-        background-size: cover;
+        background: url('../../images/png/blue-close.png') no-repeat;
+        background-size: contain;
     }
 
     textarea {
@@ -255,6 +256,10 @@
     font-weight: 700;
     font-size: 13px;
     line-height: 18px;
+
+    &-dropdown {
+        padding: 0;
+    }
 
     th {
         padding: 8px;

@@ -56,7 +56,6 @@ a {
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .content {
@@ -571,7 +570,7 @@ table {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 99;
 }
-.popup__form {
+.popup__formBox {
   position: relative;
   width: 462px;
   height: 718px;
@@ -713,6 +712,7 @@ table {
   width: fit-content;
   height: 25px;
   margin-top: 8px;
+  margin-bottom: 8px;
   padding: 4px 8px;
   background: #DBEAFE;
   border-radius: 5px;
@@ -721,13 +721,13 @@ table {
   color: #1E40AF;
 }
 .popup__delete {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   padding: 0;
   border: none;
   margin-right: 4px;
-  background: url("../../images/png/close.png") no-repeat;
-  background-size: cover;
+  background: url("../../images/png/blue-close.png") no-repeat;
+  background-size: contain;
 }
 .popup textarea {
   width: 100%;
@@ -768,6 +768,9 @@ table {
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
+}
+.datepicker-dropdown {
+  padding: 0;
 }
 .datepicker th {
   padding: 8px;

@@ -186,9 +186,14 @@
 
     // Close modal
     const buttonClose = document.querySelector('.popup__button');
-    buttonClose.addEventListener('click', () => {
+    const buttonCancel = document.querySelector('.popup__cancel');
+    buttonClose.addEventListener('click', closeForm);
+    buttonCancel.addEventListener('click', closeForm);
+    function closeForm () {
         popup.style.display = 'none';
-    });
+        const guestDiv = document.querySelector('.popup-assignedChosen');
+        if(guestDiv) guestDiv.remove();
+    }
 
     // Choose guests
     const buttonAssign = document.querySelector('.popup__assigned');
@@ -205,7 +210,16 @@
             const buttonDelete = document.createElement('button');
             buttonDelete.classList.add('popup__delete');
             newGuest.prepend(buttonDelete);
-            buttonAssign.after(newGuest);
+            const guestDiv = document.querySelector('.popup-assignedChosen');
+            guestDiv.appendChild(newGuest);
+            // buttonAssign.after(newGuest);
+
+            // Delete guest
+            buttonDelete.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.target.parentElement.remove();
+                
+            })
         })
     })
 
